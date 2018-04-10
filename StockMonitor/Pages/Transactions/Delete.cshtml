@@ -1,0 +1,52 @@
+@page
+@model StockMonitor.Pages.Transactions.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Transaction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Transaction.StockId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Transaction.StockId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Transaction.IsBuying)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Transaction.IsBuying)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Transaction.StartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Transaction.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Transaction.CurrentPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Transaction.CurrentPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Transaction.ExpectedDays)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Transaction.ExpectedDays)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Transaction.Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,49 @@
+@page
+@model StockMonitor.Pages.Transactions.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Transaction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Transaction.StockId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Transaction.StockId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Transaction.IsBuying)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Transaction.IsBuying)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Transaction.StartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Transaction.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Transaction.CurrentPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Transaction.CurrentPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Transaction.ExpectedDays)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Transaction.ExpectedDays)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Transaction.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
