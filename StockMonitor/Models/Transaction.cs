@@ -10,7 +10,8 @@ namespace StockMonitor.Models
     {
         [Key]
         public int Id { get; set; }
-        public int StockId { get; set; }
+        [MaxLength(8)]
+        public string StockId { get; set; }
         public bool IsBuying { get; set; }
         public DateTime StartDate { get; set; }
         public float CurrentPrice { get; set; }

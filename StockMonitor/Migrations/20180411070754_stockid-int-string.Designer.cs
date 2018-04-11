@@ -12,9 +12,10 @@ using StockMonitor.Models;
 namespace StockMonitor.Migrations
 {
     [DbContext(typeof(TransactionContext))]
-    partial class TransactionContextModelSnapshot : ModelSnapshot
+    [Migration("20180411070754_stockid-int-string")]
+    partial class stockidintstring
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,8 +35,7 @@ namespace StockMonitor.Migrations
 
                     b.Property<DateTime>("StartDate");
 
-                    b.Property<string>("StockId")
-                        .HasMaxLength(8);
+                    b.Property<string>("StockId");
 
                     b.HasKey("Id");
 
