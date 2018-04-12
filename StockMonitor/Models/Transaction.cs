@@ -13,6 +13,7 @@ namespace StockMonitor.Models
         [MaxLength(8)]
         public string StockId { get; set; }
         public bool IsBuying { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime StartDate { get; set; }
         public float CurrentPrice { get; set; }
         public float ExpectedDays { get; set; }
