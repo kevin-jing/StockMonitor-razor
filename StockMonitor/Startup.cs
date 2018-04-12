@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using StockMonitor.Background;
 using StockMonitor.Models;
 
@@ -25,7 +25,10 @@ namespace StockMonitor
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<TransactionContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));
+                options.UseSqlServer(Configuration.GetConnectionString("ConnectionString")),
+                ServiceLifetime.Singleton,
+                ServiceLifetime.Singleton
+                );
 
             services.AddMvc().AddRazorPagesOptions(options =>
             {
@@ -34,7 +37,7 @@ namespace StockMonitor
 
             services.AddSignalR();
 
-            services.AddSingleton<Microsoft.Extensions.Hosting.IHostedService, Monitor>();
+            services.AddSingleton<IHostedService, Monitor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
