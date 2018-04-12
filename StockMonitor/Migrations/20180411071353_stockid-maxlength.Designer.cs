@@ -12,9 +12,10 @@ using StockMonitor.Models;
 namespace StockMonitor.Migrations
 {
     [DbContext(typeof(TransactionContext))]
-    partial class TransactionContextModelSnapshot : ModelSnapshot
+    [Migration("20180411071353_stockid-maxlength")]
+    partial class stockidmaxlength
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
