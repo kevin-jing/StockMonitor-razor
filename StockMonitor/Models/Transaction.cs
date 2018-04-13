@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace StockMonitor.Models
 {
@@ -15,7 +12,8 @@ namespace StockMonitor.Models
         public bool IsBuying { get; set; }
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime StartDate { get; set; }
-        public float CurrentPrice { get; set; }
+        public float InitialPrice { get; set; }
+        public float Rate { get; set; }
         public float ExpectedDays { get; set; }
     }
 }

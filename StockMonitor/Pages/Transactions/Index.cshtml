@@ -23,7 +23,10 @@
                     @Html.DisplayNameFor(model => model.Transaction[0].StartDate)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Transaction[0].CurrentPrice)
+                    @Html.DisplayNameFor(model => model.Transaction[0].InitialPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Transaction[0].Rate)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Transaction[0].ExpectedDays)
@@ -44,7 +47,10 @@
                 @Html.DisplayFor(modelItem => item.StartDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CurrentPrice)
+                @Html.DisplayFor(modelItem => item.InitialPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ExpectedDays)

@@ -11,9 +11,9 @@ namespace StockMonitor.Pages.Transactions
 {
     public class CreateModel : PageModel
     {
-        private readonly TransactionContext _context;
+        private readonly StockMonitor.Models.TransactionContext _context;
 
-        public CreateModel(TransactionContext context)
+        public CreateModel(StockMonitor.Models.TransactionContext context)
         {
             _context = context;
         }

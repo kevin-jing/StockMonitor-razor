@@ -27,7 +27,7 @@ namespace StockMonitor.Pages.Transactions
                 return NotFound();
             }
 
-            Transaction = await _context.Transactions.SingleOrDefaultAsync(m => m.Id == id);
+            Transaction = await _context.Transactions.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Transaction == null)
             {

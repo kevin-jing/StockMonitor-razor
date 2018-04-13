@@ -20,9 +20,9 @@
             </div>
             <div class="form-group">
                 <div class="checkbox">
-                    <label>
-                        <input asp-for="Transaction.IsBuying" /> IsBuying?
-                    </label>
+					<label>
+						<input asp-for="Transaction.IsBuying" /> IsBuying
+					</label>
                 </div>
             </div>
             <div class="form-group">
@@ -31,9 +31,14 @@
                 <span asp-validation-for="Transaction.StartDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Transaction.CurrentPrice" class="control-label"></label>
-                <input asp-for="Transaction.CurrentPrice" class="form-control" />
-                <span asp-validation-for="Transaction.CurrentPrice" class="text-danger"></span>
+                <label asp-for="Transaction.InitialPrice" class="control-label"></label>
+                <input asp-for="Transaction.InitialPrice" class="form-control" />
+                <span asp-validation-for="Transaction.InitialPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Transaction.Rate" class="control-label"></label>
+                <input asp-for="Transaction.Rate" class="form-control" />
+                <span asp-validation-for="Transaction.Rate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Transaction.ExpectedDays" class="control-label"></label>

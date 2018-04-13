@@ -1,0 +1,8 @@
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+
+Add-Migration Rate
+Update-Database
+
+
+cd StockMonitor
+dotnet aspnet-codegenerator razorpage -m Transaction -dc TransactionContext -udl -outDir Pages\Transactions --referenceScriptLibraries
